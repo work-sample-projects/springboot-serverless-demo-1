@@ -11,8 +11,8 @@ public class WelcomeController {
 	@RequestMapping("/")
 	public String landingPage(Map<String, Object> model) {
 		model.put("message", "Hello World");
-		
-		//Return the landing page
+
+		// Return the landing page
 		return "landing";
 	}
 }
