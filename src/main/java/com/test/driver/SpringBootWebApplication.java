@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages= {"com.test.controller"})
 public class SpringBootWebApplication {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(final String[] args) throws Exception {
 		SpringApplication.run(SpringBootWebApplication.class, args);
 	}
 }

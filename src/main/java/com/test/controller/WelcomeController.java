@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WelcomeController {
 
 	@RequestMapping("/")
-	public String landingPage(Map<String, Object> model) {
+	public String landingPage(final Map<String, Object> model) {
+		
 		model.put("message", "Hello World");
 
 		// Return the landing page
