@@ -1,4 +1,5 @@
 - Setup synk/updater
 - Setup CI/CD on updates
 - Setup versions on the endpoints
+- finish the build and run scripts
 - 
