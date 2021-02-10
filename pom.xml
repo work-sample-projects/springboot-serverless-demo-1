@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>springboot-serverless-demo</groupId>
 	<artifactId>springboot-serverless-demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>SpringBootServerlessDemo</name>
 
 	<!-- Package the output as a jar -->
