@@ -4,7 +4,7 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 0.0.1-SNAPSHOT   | :white_check_mark: |
+| 1.0.0-SNAPSHOT   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
