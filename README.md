@@ -10,4 +10,5 @@ These include the port number and default URL.
 ### Swagger:
 http://{url}:{port_num}/swagger-ui.html.
 
+### License:
 This project is licensed under the GNU General Public License v3.0, see the license file for details
