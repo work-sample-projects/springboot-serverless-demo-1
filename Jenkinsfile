@@ -8,20 +8,21 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        /*
         stage('Test') {
             steps {
                 
                 echo 'Testing..'
-                sh 'mvn test'
+                sh 'mvn -B test'
                 
-                post {
-                    always {
-                        junit 'target/surefire-reports/*.xml'
-                    }
-                }
+                // post {
+                //     always {
+                //         junit 'target/surefire-reports/*.xml'
+                //     }
+                // }
             }
         }
+
+        /*
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
