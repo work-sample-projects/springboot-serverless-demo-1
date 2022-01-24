@@ -33,11 +33,11 @@ pipeline {
         */
     }
     
-     post {
-        always {
-            junit 'build/reports/**/*.xml'
-        }
-    }
+//      post {
+//         always {
+//             junit 'build/reports/**/*.xml'
+//         }
+//     }
     
 //     post {
 //       always {
@@ -45,9 +45,9 @@ pipeline {
 //       }
 //    } 
 
-//     post {
-//         always {
-//             junit 'target/surefire-reports/*.xml'
-//         }
-//     }
+    post {
+        always {
+            junit 'target/surefire-reports/*.xml'
+        }
+    }
 }
