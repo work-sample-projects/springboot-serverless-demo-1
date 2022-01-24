@@ -33,6 +33,12 @@ pipeline {
         */
     }
     
+     post {
+        always {
+            junit 'build/reports/**/*.xml'
+        }
+    }
+    
 //     post {
 //       always {
 //         junit '**/reports/junit/*.xml'
