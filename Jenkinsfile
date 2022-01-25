@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    options {
+        disableConcurrentBuilds()
+    }
 
     stages {
         stage('Build') {
@@ -31,19 +35,7 @@ pipeline {
             }
         }
         */
-    }
-    
-//      post {
-//         always {
-//             junit 'build/reports/**/*.xml'
-//         }
-//     }
-    
-//     post {
-//       always {
-//         junit '**/reports/junit/*.xml'
-//       }
-//    } 
+    }  
 
     post {
         always {
