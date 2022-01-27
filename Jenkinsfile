@@ -6,19 +6,22 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
-           steps {
-               echo 'Building..'
-                sh 'mvn -B -DskipTests clean package'
-            }
+        
+        stage('Docker build'){
         }
-        stage('Test') {
-            steps {
+//         stage('Build') {
+//            steps {
+//                echo 'Building..'
+//                 sh 'mvn -B -DskipTests clean package'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
                 
-                echo 'Testing..'
-                sh 'mvn -B test'
-            }
-        }
+//                 echo 'Testing..'
+//                 sh 'mvn -B test'
+//             }
+//         }
 
         /*
         stage('Upload artifacts') {
