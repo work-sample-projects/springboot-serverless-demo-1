@@ -1,8 +1,17 @@
-FROM openjdk:8-jdk-alpine
+FROM maven:3.8.4-openjdk-17-slim
 
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+#Clone from github
+RUN git clone https://github.com/work-sample-projects/springboot-serverless-demo-1.git
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+#Change the workingdir to the sprintboot folder
+WORKDIR
 
-EXPOSE 8080
+#Run a maven clean install
+RUN mvn clean install
+
+# ARG JAR_FILE=target/*.jar
+# COPY ${JAR_FILE} app.jar
+
+# ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# EXPOSE 8080
