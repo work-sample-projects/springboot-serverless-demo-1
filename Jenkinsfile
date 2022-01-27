@@ -8,6 +8,10 @@ pipeline {
     stages {
         
         stage('Docker build'){
+            steps {
+                sh  """docker build ."
+                """
+            }
         }
 //         stage('Build') {
 //            steps {
