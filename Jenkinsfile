@@ -10,14 +10,14 @@ pipeline {
         stage('Docker build'){
             steps {
                 sh  """
-                    docker run -tty --rm --name rhlisteners -v \$(pwd):/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn clean install
+                    docker run- -rm --name rhlisteners -v \$(pwd):/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn clean install
                 """
             }
         }
         stage('Test') {
             steps {              
                 sh  """
-                    docker run -tty --rm --name rhlisteners -v \$(pwd):/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn test
+                    docker run --rm --name rhlisteners -v \$(pwd):/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn test
                 """
             }
         }
