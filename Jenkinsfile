@@ -10,17 +10,17 @@ pipeline {
         stage('Docker build'){
             steps {
                 sh  """
-                    docker build .
+                    docker run -it --rm --name rhlisteners -v $(pwd):/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn clean install
                 """
             }
         }
-//         stage('Test') {
-//             steps {
-                
-//                 echo 'Testing..'
-//                 sh 'mvn -B test'
-//             }
-//         }
+        stage('Test') {
+            steps {              
+                sh  """
+                    docker run -it --rm --name rhlisteners -v $(pwd):/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn test
+                """
+            }
+        }
 
         /*
         stage('Upload artifacts') {
