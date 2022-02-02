@@ -10,7 +10,7 @@ pipeline {
         stage('Docker build'){
             steps {
                 sh  """
-                    docker run- -rm --name rhlisteners -v '\$(pwd)':/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn clean install
+                    docker run --rm --name rhlisteners -v '\$(pwd)':/springboot-serverless-demo-1 --workdir /springboot-serverless-demo-1 maven:3.3-jdk-8 mvn clean install
                 """
             }
         }
