@@ -14,12 +14,6 @@ pipeline {
                 """
             }
         }
-//         stage('Build') {
-//            steps {
-//                echo 'Building..'
-//                 sh 'mvn -B -DskipTests clean package'
-//             }
-//         }
 //         stage('Test') {
 //             steps {
                 
@@ -33,13 +27,6 @@ pipeline {
             steps {
                 echo 'Uploading artifacts....'
                 // Insert your code to upload any produced artifacts in prep for deploy stage
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                // Insert your deploy code here
             }
         }
         */
